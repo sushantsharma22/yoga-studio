@@ -1,0 +1,112 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures the body and HTML occupy the full viewport height */
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #4C2A85; /* Purple background for the body */
+    color: #333;
+    overflow: hidden; /* Ensures no scrolling */
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    height: 100%; /* Full viewport height */
+}
+
+/* Top Section: Hero Image */
+.hero-section {
+    flex: 1; /* Occupies 50% of the container */
+    position: relative;
+    overflow: hidden;
+    background-color: #30225e; /* Purple background to avoid gaps if the image doesn't load */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the section neatly */
+}
+
+/* Bottom Section: Content Container */
+.content-container {
+    flex:0 ; /* Occupies 50% of the container */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    background-color: #30225e; /* Matches the purple background */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+}
+
+/* Inner Text Container */
+.text-container {
+    width: 60%; /* Adjust the width as needed */
+    background-color: #fff; /* White background for the text container */
+    padding: 30px; /* Adds padding inside the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: left; /* Center-aligns text */
+    color: #30225e; /* Text color inside the box */
+    margin: 0; /* No margin */
+}
+
+/* Headings */
+.text-container h2 {
+    color: #30225e; /* Green for headings */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Paragraphs */
+.text-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px; /* Slight margin for spacing */
+}
+
+/* List Styling */
+.text-container ul {
+    list-style-type: disc; /* Disc bullets */
+    margin: 10px auto; /* Adjust spacing */
+    padding-left: 40px; /* Indent the list slightly */
+    text-align: left; /* Align bullets to the left */
+}
+
+/* Address */
+.text-container address {
+    font-style: normal; /* Normal text style for address */
+    margin-top: 15px;
+    color: #30225e;
+    line-height: 1.6;
+}
+/* Add a specific style for the copyright text */
+.studio-copyright {
+    color: #000000; 
+}
+
+
+/* Links */
+.text-container a {
+    color: #2f2753;
+    text-decoration: underline;
+}
+
+.text-container a:hover {
+    text-decoration: underline; /* Underline for link */
+}
+.text-container .copyright {
+    text-align: center; /* Align text to the left */
+    margin-top: 50px; /* Add spacing from other elements */
+
+}
+.hero-title {
+    position: absolute;
+    top: 35%;
+    left: 5%; 
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+}
