@@ -9,6 +9,41 @@ body, html {
     overflow: hidden; /* Ensures no scrolling */
 }
 
+/* Navigation Bar Styles */
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent; /* Transparent to blend with the hero image */
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White links to match the image background */
+    font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+
 /* Main Layout */
 .main-container {
     display: flex;
@@ -32,7 +67,7 @@ body, html {
 
 /* Bottom Section: Content Container */
 .content-container {
-    flex:0 ; /* Occupies 50% of the container */
+    flex:1 ; /* Occupies 50% of the container */
     display: flex;
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically */
