@@ -202,3 +202,127 @@ audio {
         grid-template-columns: 1fr;
     }
 }
+
+/* Contact Page Styles */
+.contact-form {
+    width: 100%;
+    max-width: 800px; /* Max-width of Form */
+    margin: 0 auto;
+    padding: 2vw;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #30225e;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #30225e;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-form button:hover {
+    background-color: #4C2A85;
+}
+
+/* Centered Address Section */
+.address-container {
+    text-align: center;
+    margin-top: 20px; /* Adds spacing above the address */
+}
+
+.address-container address {
+    font-style: italic;
+    color: #4C2A85; /* Matching theme color */
+    font-size: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px; /* Adds spacing from the content */
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.address {
+    font-style: italic;
+    color: #4C2A85;
+    font-size: 1rem;
+    margin-bottom: 10px; /* Adds spacing between address and copyright */
+}
+
+.copyright {
+    font-size: 1rem;
+}
+
+.copyright a {
+    color: #4C2A85;
+    text-decoration: underline;
+}
+
+
+/* Responsive Layout for Contact Page */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 4vw;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        right: 10px;
+        gap: 10px;
+    }
+
+    .nav-bar a {
+        font-size: 1em;
+    }
+
+    .text-container {
+        width: 90%;
+        padding: 5vw;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    .address-container {
+        text-align: center;
+    }
+}
