@@ -2,111 +2,166 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%; /* Ensures the body and HTML occupy the full viewport height */
+    width: 100%;
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #4C2A85; /* Purple background for the body */
     color: #333;
-    overflow: hidden; /* Ensures no scrolling */
 }
 
 /* Main Layout */
 .main-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    height: 100%; /* Full viewport height */
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
 }
 
 /* Top Section: Hero Image */
 .hero-section {
-    flex: 1; /* Occupies 50% of the container */
+    width: 100%;
+    height: 30vh; /* Adjusted to 30% of viewport height */
     position: relative;
-    overflow: hidden;
-    background-color: #30225e; /* Purple background to avoid gaps if the image doesn't load */
+    background-color: #30225e; /* Fallback background */
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the section neatly */
+    object-fit: cover;
 }
 
-/* Bottom Section: Content Container */
-.content-container {
-    flex:0 ; /* Occupies 50% of the container */
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2.5vw;  /* Responsive font size */
+    font-weight: bold;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
     display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically */
-    background-color: #30225e; /* Matches the purple background */
-    margin: 0; /* No margin */
-    padding: 0; /* No padding */
+    gap: 20px;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.nav-bar a.active {
+    text-decoration: underline;
+}
+
+/* Content Container */
+.content-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #30225e;
+    width: 100%;
+    padding: 3vw;
+    box-sizing: border-box;
+    margin-top: -45px;
 }
 
 /* Inner Text Container */
 .text-container {
-    width: 60%; /* Adjust the width as needed */
-    background-color: #fff; /* White background for the text container */
-    padding: 30px; /* Adds padding inside the container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: left; /* Center-aligns text */
-    color: #30225e; /* Text color inside the box */
-    margin: 0; /* No margin */
-}
-
-/* Headings */
-.text-container h2 {
-    color: #30225e; /* Green for headings */
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-/* Paragraphs */
-.text-container p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 10px; /* Slight margin for spacing */
-}
-
-/* List Styling */
-.text-container ul {
-    list-style-type: disc; /* Disc bullets */
-    margin: 10px auto; /* Adjust spacing */
-    padding-left: 40px; /* Indent the list slightly */
-    text-align: left; /* Align bullets to the left */
-}
-
-/* Address */
-.text-container address {
-    font-style: normal; /* Normal text style for address */
-    margin-top: 15px;
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 3vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #30225e;
+    box-sizing: border-box;
+}
+
+/* Responsive Layout for Class Sections */
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2vw;
+}
+
+.classes-grid h3 {
+    font-size: 1.5vw;
+    color: #30225e;
+}
+
+.classes-grid p {
+    font-size: 1.1vw;
     line-height: 1.6;
 }
-/* Add a specific style for the copyright text */
-.studio-copyright {
-    color: #000000; 
+
+/* Relax Section */
+.relax-section h2 {
+    font-size: 1.8vw;
+    color: #4C2A85;
 }
 
+.relax-section p {
+    font-size: 1vw;
+}
 
-/* Links */
-.text-container a {
-    color: #2f2753;
+/* Audio Player */
+audio {
+    width: 25%;
+    max-width: 600px;
+    display: block;
+}
+
+/* Yoga Image */
+.yoga-image {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 2vw auto;
+    border-radius: 10px;
+}
+
+/* Footer */
+.copyright {
+    text-align: center;
+    font-size: 1vw;
+    margin-top: 2vw;
+}
+
+.copyright a {
+    color: #4C2A85;
     text-decoration: underline;
 }
 
-.text-container a:hover {
-    text-decoration: underline; /* Underline for link */
-}
-.text-container .copyright {
-    text-align: center; /* Align text to the left */
-    margin-top: 50px; /* Add spacing from other elements */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 4vw;
+    }
 
-}
-.hero-title {
-    position: absolute;
-    top: 35%;
-    left: 5%; 
-    color: white;
-    font-size: 2.5em;
-    font-weight: bold;
-    margin: 0;
+    .nav-bar {
+        flex-direction: column;
+        right: 10px;
+        gap: 10px;
+    }
+
+    .nav-bar a {
+        font-size: 1em;
+    }
+
+    .text-container {
+        width: 90%;
+        padding: 5vw;
+    }
+
+    .classes-grid {
+        grid-template-columns: 1fr;
+    }
 }
