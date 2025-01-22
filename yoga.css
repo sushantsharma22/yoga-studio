@@ -11,6 +11,29 @@ body, html {
     overflow-y: auto;   /* Allow vertical scroll */
 }
 
+
+.index-page .text-container {
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    color: #30225e; /* Darker purple for text */
+    min-height: 70vh; /* Set a baseline height for the box */
+    line-height: 1.6; /* Better readability for text */
+}
+
+.index-page .text-container {
+    font-size: 1.2em; /* Adjust the size to your preference */
+    line-height: 1.8; /* Optional: Improve readability */
+}
+.index-page .text-container h2 {
+    font-size: 1.8em; /* Adjust size as desired */
+    font-weight: bold; /* Optional: Make it stand out */
+    color: #30225e; /* Optional: Change color if needed */
+}
+
+
+
+
 /* Navigation Bar Styles */
 .navbar {
     position: absolute;
